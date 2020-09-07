@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Анастасия](https://up.htmlacademy.ru/htmlcss/29/user/384107).
-* Наставник: `Неизвестно`.
+* Наставник: [Никита Сигов](https://htmlacademy.ru/profile/crazer).
 
 ---
 
