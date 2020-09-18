@@ -12,6 +12,7 @@
 	--dark-green-shadow: #367315;
 
 	/*серые оттенки*/
+	--extra-light-grey: #E5E5E5;
 	--white: #FFFFFF;
 	--the-lightnest-grey: #C5C5C5;
 	--the-lightness-grey-transparent: rgba(197, 197, 197, 0.3);
@@ -47,7 +48,7 @@
 	--special-blue: #3BBCE3;
 	--special-pink: #DC91D8;
 
-	--gradient--lightness-grey: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #EAEAEA;
+	--gradient-lightness-grey: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #EAEAEA;
 }
 
 body {
@@ -203,7 +204,6 @@ img {
 
 
 .categories-list li {
-	font-weight: bold;
 	font-size: 24px;
 	line-height: 30px;
 }
@@ -236,13 +236,19 @@ img {
 }
 
 .slider {
-	font-size: 18px;
-	line-height: 24px;
 	background-color: var(--darknest-grey)
 }
 
-.slider span {
+.slider p {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.title-bold {
 	font-weight: bold;
+}
+
+.slider span {
 	font-size: 36px;
 	line-height: 36px;
 	text-transform: uppercase;
@@ -269,6 +275,7 @@ img {
 	font-size: 30px;
 	line-height: 30px;
 	text-transform: uppercase;
+	font-weight: normal;
 }
 
 .title-gray {
@@ -280,6 +287,10 @@ img {
 	font-weight: bold;
 	font-size: 17px;
 	line-height: 18px;
+}
+
+.products-item {
+	border: 1px solid var(--ultra-light-grey);
 }
 
 .products-item h3 {
@@ -404,11 +415,13 @@ img {
 
 .sorting-item {
 	color:var(--light-black-transparent);
+	border-bottom: 1px dotted var(--basic-red);
 
 }
 
 .sorting-item:hover {
 	color: var(--black);
+	border-bottom: 1px solid var(--basic-red);
 }
 
 
@@ -451,6 +464,25 @@ img {
 }
 .account:active {
 	color:var(--the-lightnest-grey);
+}
+
+.breadcrumbs-item .small-title {
+	color: var(--black);
+}
+
+.pagination-item {
+background: var(--white);
+border: 1px solid var(--extra-light-grey);
+box-sizing: border-box;
+border-radius: 2px;
+}
+
+.pagination-item:hover {
+	border: 1px solid var(--the-lightnest-grey);
+}
+
+.pagination-item:active {
+	border: 1px solid var(--basic-red);
 }
 
 .pagination-item a {
@@ -502,7 +534,6 @@ img {
 	background-color: var(--white);
 	box-sizing: border-box;
 	border-radius: 2px;
-	/*Всё работает, но при клике появляются двойные границы у кнопки. Синяя и серая*/
 
 }
 
