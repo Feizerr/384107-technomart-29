@@ -190,6 +190,10 @@ img {
 	box-shadow: inset 0px -5px 0px var(--darknest-grey);	
 }
 
+.categories {
+	color: var(--white);
+}
+
 .categories-list {
 	color: var(--white);
 }
@@ -236,10 +240,10 @@ img {
 }
 
 .slider {
-	background-color: var(--darknest-grey)
+	background-color: var(--darknest-grey);
 }
 
-.slider p {
+.slider-item p {
 	font-size: 18px;
 	line-height: 24px;
 }
@@ -248,7 +252,7 @@ img {
 	font-weight: bold;
 }
 
-.slider span {
+.slider-item span {
 	font-size: 36px;
 	line-height: 36px;
 	text-transform: uppercase;
@@ -354,6 +358,7 @@ img {
 	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 13px;
 	line-height: 24px;
+	color: var(--black);
 }
 
 .partners-list {
