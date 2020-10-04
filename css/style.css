@@ -159,6 +159,7 @@ img {
 
 .header-bottom {
 	display: flex;
+	/*flex-wrap: wrap;*/
 	justify-content: space-between;
 	align-items: baseline;
 	width: 940px;
@@ -237,6 +238,7 @@ img {
 	font-weight: bold;
 	font-size: 21px;
 	line-height: 30px;
+	min-width: 270px;
 	
 }
 
@@ -726,28 +728,132 @@ img {
 	font-size: 21px;
 	line-height: 21px;
 	color: var(--black);
+	display: block;
+	margin: 0;
+	padding: 0;
+	padding: 12px 57px 12px 56px;
+	
 }
+
 .login:active {
 	color:var(--the-lightnest-grey);
 }
 
 .account {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 299px;
+}
+
+.login-content {
+	background-color: var(--white);
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.account-link-info {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: inherit;
+
+}
+
+}
+.log-out {
+	width: 20px;
+	height: 17px;
+}
+
+
+.account-link {
 	font-size: 16px;
 	line-height: 18px;
 	color: var(--grey-blue);
 }
 
 
-.account:hover {
+.account-link:hover {
 	color: var(--basic-red);
 
 }
-.account:active {
+.account-link:active {
 	color:var(--the-lightnest-grey);
 }
 
+.sorting {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 700px;
+} 
+
+.sorting-title {
+	width: 241px;
+	margin-left: 20px;
+
+}
+
+.sorting-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.sorting-item {
+	margin: 0:;
+	padding: 0;
+	padding-right: 20px;
+}
+
+.sorting-item:last-child {
+	padding-right: 0px;
+}
+
+.sorting-button-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin-right: 46px;
+
+}
+.sorting-button {
+	margin: 0:;
+	padding: 0;
+
+}
+
+.sorting-button-smaller {
+	padding-right: 20px;
+}
+
+.breadcrumbs-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+
+}
+
+.breadcrumbs-list li {
+  position: relative;
+  margin-right: 40px;
+}
+
+.breadcrumbs-list li:last-child {
+  margin-right: 0;
+}
+
+
 .breadcrumbs-item .small-title {
 	color: var(--black);
+}
+
+.pagination-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
 }
 
 .pagination-item {
@@ -755,6 +861,9 @@ background: var(--white);
 border: 1px solid var(--extra-light-grey);
 box-sizing: border-box;
 border-radius: 2px;
+margin: 0;
+padding: 10px 15px;
+margin-bottom: 10px;
 }
 
 .pagination-item:hover {
