@@ -757,7 +757,7 @@ img {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	width: inherit;
+	width: 299px;
 
 }
 
@@ -851,9 +851,12 @@ img {
 }
 
 .pagination-list {
+	grid-column: 2/3;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
+	margin: 0;
+	padding: 0;
 }
 
 .pagination-item {
@@ -862,8 +865,15 @@ border: 1px solid var(--extra-light-grey);
 box-sizing: border-box;
 border-radius: 2px;
 margin: 0;
+margin-right: 10px;
+margin-bottom: 59px;
 padding: 10px 15px;
-margin-bottom: 10px;
+
+}
+
+.pagination-item:last-child {
+	margin-right: 0;
+
 }
 
 .pagination-item:hover {
