@@ -34,8 +34,16 @@
 		  				<a class="phone-link" href="tel:+78125550555"> +7 (812) 555-05-55</a>
 		  				<p class="address">г. Санкт-Петербург ул. Б. Конюшенная, д. 19/8</p>
 		  			</div>
-		  			<a class="link login-link login-enter-link" href="#">Войти</a>
-		  			<a class="link login-link login-registration-link" href="#">Регистрация</a>
+		  			<div class="enter">
+			  			<a class="link login-link login-enter-link" href="#">
+				  			<svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M14.875 8.5L6 0V6H0V11H6V17L14.875 8.5Z" fill="#C5C5C5"/>
+								<path d="M16.986 15.01H11.959V17H16.986C19.164 17 19.99 15.19 20.015 13.974V3.028C19.99 1.811 19.164 0 16.986 0H11.959V1.99H16.986C17.825 1.99 17.978 2.671 17.996 3.047V13.951C17.979 14.327 17.825 15.01 16.986 15.01Z" fill="#C5C5C5"/>
+								</svg> 
+							Войти
+						</a>
+			  			<a class="link login-link login-registration-link" href="#">Регистрация</a>
+			  		</div>
 		  		</div>
 		  		<nav class="main-navigation">
 		  			<ul class="site-navigation list">
@@ -73,6 +81,7 @@
 		  			<ul class="categories-list list">
 		  				<li class="materials-item categories-item new">
 		            		<p class="title-bold">Материалы</p>
+		            		<!-- НАДО ЛИ ПОЗИЦИОНИРОВАТЬ ОТНОСИТЕЛЬНО ЗАГОЛОВКА? -->
 		  					<a class="categories-link" href="#">На любой вкус</a>
 		  				</li>
 		  				<li class="instruments-item categories-item">
@@ -300,6 +309,7 @@
 			  	</div>
 		  </div>
 	  	</main>
+
 	  	<footer class="page-footer main-footer">
 	      	<div class="main-navigation-footer footer-navigation">
 		        <div class="nav-bottom top-footer-content"> 
@@ -323,8 +333,10 @@
 			              	<a class="link link-underline" href="#">Контакты</a>
 			            </li>
 		          	</ul>
-			        <p class="footer-address">г. Санкт-Петербург ул. Б. Конюшенная, д. 19/8</p>
-			        <p class="footer-phone"><a class="link" href="tel:+78125550555">+7 (812) 555-05-55</a></p>
+			        <div>
+			        	<p class="footer-address">г. Санкт-Петербург ул. Б. Конюшенная, д. 19/8</p>
+			        	<p class="footer-phone"><a class="link" href="tel:+78125550555">+7 (812) 555-05-55</a></p>
+			    	</div>
 			        <ul class="footer-offers-list list">
 			            <li><a class="link-underline" href="#">Материалы</a></li>
 			            <li><a class="link-underline" href="#">Техника</a></li>
@@ -364,14 +376,42 @@
 			              	</a>
 			            </li>
 		          	</ul>
-		          	<p class="contact-email">Обратная связь: <br>
+		          	<p class="contact-email">Обратная связь:<br>
 		            	<a class="yellow-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
 		            </p>
-		          	<p class="developer">Разработано —  <br>
+		          	<p class="developer">Разработано — <br>
 		            	<a class="yellow-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
 		          	</p>
 		        </div>
 		     </div>
 	    </footer>
+	    <!-- Pop-up -->
+	    <section class="modal modal-write-us">
+	    	<h2 class="visually-hidden"> Форма для связи с компанией</h2>
+	    	<form class="send-message" action="https://echo.htmlacademy.ru" method="post">
+			    <p class="name-text">
+			    	<label for="name-field">Ваше имя:</label>
+			    	<input type="text" id="name-field" name="name" placeholder="Имя Фамилия">
+			    </p>
+			    <p class="mail-next">
+			    	<label for="mail-field">Ваш e-mail:</label>
+			    	<input type="email" id="mail-field" name="mail" placeholder="email@example.com">
+			    </p>
+			    <p>
+			    	<label for="message-field">Текст письма:</label> 
+			    	<textarea name="comment" id="message-field">В свободной форме</textarea>
+			    </p>
+			    
+			    <input class="button button-write-us" type="submit" value="Отправить" target="_blank">
+			</form>
+
+	    	<buttom type="button" class="modal-close" aria-label="Закрыть"></buttom>
+	    </section>
+	    <section class="modal modal-map">
+	    	<h2 class="visually-hidden">Расположение магазина</h2>
+	    	<buttom type="button" class="modal-close" aria-label="Закрыть"></buttom>
+	    	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.3208946159536!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1602976993806!5m2!1sru!2sru" width="943" height="449" title="Магазин по адресу: Большая Конюшенная, дом 19, Санкт-Петербург"></iframe>	
+
+	    </section>
   	</body>
 </html>
