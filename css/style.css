@@ -313,7 +313,6 @@ img {
 	font-weight: bold;
 	font-size: 21px;
 	line-height: 30px;
-	/*min-width: 260px;*/
 	position: relative;
 }
 
@@ -635,9 +634,7 @@ img {
   	background-repeat: no-repeat;
   	background-position: 0 0;
   	left: 24px;
-
 }
-
 
 .slider ul {
 	margin: 0;
@@ -666,7 +663,6 @@ img {
 	padding: 0;
 	margin: 0;
 	top: 23px;
-
 }
 
 .slider-item p {
@@ -676,8 +672,7 @@ img {
 	grid-row: 1/2;
 	padding: 0;
 	margin: 0;
-	top: 64px;
-  	
+	top: 64px;	
 }
 
 .slider-item .button {
@@ -732,7 +727,6 @@ img {
 	background-color: var(--cherry-red);
 }
 
-
 .slider-button {
 	border: none;
 	padding: 0;
@@ -746,10 +740,7 @@ img {
   	background-image: url("../img/icon-left.svg");
   	background-color: transparent;
   	top: 122px;
-
 }
-
-
 
 .slider-button-left {
 	left: 25px;
@@ -862,7 +853,6 @@ img {
 	margin: 0;
   	padding: 0;
 
-
 }
 
 .products-item {
@@ -881,8 +871,9 @@ img {
 	display: none;
 	padding-left: 41px;
 	padding-top: 38px;
-
 }
+
+
 .button-buy button {
 	min-width: 135px;
 	height: 38px;
@@ -897,7 +888,6 @@ img {
 	padding-left: 53px;
 	text-align: left;
 	margin-bottom: 10px;
-
 }
 
 .buy::before {
@@ -911,15 +901,15 @@ img {
 	top: 10px;
 	left: 30px;
 	opacity: 0.3;
-
 }
 
-
-.products-item:hover img{
+.products-item:hover img,
+.products-item:focus-within img{
 	visibility: hidden;
 
 }
-.products-item:hover .button-buy {
+.products-item:hover .button-buy,
+.products-item:focus-within .button-buy {
 	display: block;
 	position: absolute;
 }
@@ -958,7 +948,6 @@ img {
 	margin: 0;
 	padding-top: 7px;
 	padding-bottom: 13px;
-	/*text-align: center;*/
 }
 
 .price {
@@ -987,15 +976,12 @@ img {
     top: 0; 
     border: 19px solid transparent; 
     border-left: 19px solid var(--basic-red); 
-
 }
 
 .price-hidden {
 	visibility: hidden;
 
 }
-
-
 
 .products-item img {
 	padding-top: 8px;
@@ -1004,7 +990,6 @@ img {
 	margin: auto;
 	justify-content: center;
 	object-fit: contain;
-	
 }
 
 .brands {
@@ -1060,7 +1045,6 @@ img {
 	align-items: center;
 	flex-grow: 1;
 	width: 100%;
-
 }
 
 
@@ -1171,7 +1155,6 @@ img {
 .credit,
 .guarantee {
 	background-repeat: no-repeat;
-
 }
 
 
@@ -1188,14 +1171,12 @@ img {
 .guarantee {
 	background-image: url(../img/guarantee.png);
 	background-position: 210px 10px;
-
 }
 
 .features-item .title {
 	margin: 0;
 	padding: 0;
 	margin-bottom: 28px;
-
 }
 
 .text {
@@ -1326,7 +1307,6 @@ img {
 .main-footer a {
 	color: var(--white);
 	font-size: 18px;
-	/*line-height: 24px;*/
 }
 
 .footer-logo {
@@ -1334,7 +1314,6 @@ img {
 	height: 62px;
 	width: 220px;
 	box-sizing: border-box;
-
 }
 
 .footer-offers-list a {
@@ -1384,9 +1363,7 @@ img {
 
 .yellow-link:active {
 	color: var(--basic-red);
-
 }
-
 
 
 .visually-hidden {
@@ -1473,9 +1450,7 @@ img {
 	padding: 0;
 	padding-left: 90px;
 	padding-top: 6px;
-
 }
-
 
 .bottom-footer-content .copyright{
 	margin: 0;
@@ -1611,11 +1586,7 @@ img {
 }
 
 
-
-
 /*Каталог*/
-
-
 
 .box-container .box-grey {
 	background-color: var(--basic-blue-grey);
@@ -1816,7 +1787,8 @@ img {
 	fill: var(--the-lightnest-grey);
 }
 
-.sorting-button:hover path {
+.sorting-button:hover path,
+.sorting-button:focus-within path  {
 	fill: var(--black);
 }
 
@@ -2115,9 +2087,11 @@ img {
   	opacity: 0.6;
 
 }
-.filter-input-checkbox:hover + label:hover::before {
+.filter-input-checkbox:hover + label:hover::before,
+.filter-input-checkbox:hover + label:focus::before {
 	opacity: 1;
 }
+
 
 .filter-input-checkbox:checked + label::before {
   	content: "";
@@ -2132,7 +2106,8 @@ img {
   	opacity: 0.6;
 }
 
-.filter-input-checkbox:hover:checked + label:hover::before {
+.filter-input-checkbox:hover:checked + label:hover::before,
+.filter-input-checkbox:focus:checked + label:hover::before {
 		opacity: 1;
 }
 
@@ -2154,6 +2129,7 @@ img {
 	opacity: 1;
 }
 
+
 .filter-input-radio:checked + label::before {
 	content: "";
 	position: absolute;
@@ -2167,10 +2143,15 @@ img {
 	opacity: 0.6;
 }
 
-.filter-input-radio:hover:checked + label:hover::before {
+.filter-input-radio:hover:checked + label:hover::before,
+.filter-input-radio:focus:checked + label:hover::before {
 	opacity: 1;
 }
 
+.filter-input:hover + label,
+.filter-input:focus + label {
+  font-weight: bold;
+}
 
 
 .filter-button {
@@ -2402,6 +2383,7 @@ textarea {
   	height: 22px;
   	border: 0;
   	cursor: pointer;
+  	background-color: transparent;
 
 }
 
