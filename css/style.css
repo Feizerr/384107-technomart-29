@@ -1083,8 +1083,8 @@ img {
 
 .button-buy {
 	display: none;
-	padding-left: 41px;
 	padding-top: 38px;
+	padding-left: 41px;
 }
 
 
@@ -1453,16 +1453,16 @@ img {
 
 }
 
-.features-button-list a:not(.features-button-active):hover{
+.features-button-list a:hover:not(.features-button-active){
 	background-color: var(--darknest-grey);
 }
 
-.features-button-active a{
+.features-button .features-button-active{
 	background-color: var(--white);
 	color: var(--grey-blue);
 }
 
-.features-button:not(.features-button-active) {
+.features-button {
   	border-bottom: 1px solid var(--special-border-dark-blue);
   	-webkit-box-shadow: 0px 1px 0 var(--special-border-blue) inset;
   	        box-shadow: 0px 1px 0 var(--special-border-blue) inset;
@@ -1495,6 +1495,14 @@ img {
 .guarantee {
 	background-image: url(../img/guarantee.png);
 	background-position: 210px 10px;
+}
+
+.features-item {
+	display: none;
+}
+
+.features-item-active {
+	display: block;
 }
 
 .features-item .title {

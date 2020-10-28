@@ -7,6 +7,36 @@ let personMail = document.querySelector(".mail-info");
 let personText = document.querySelector(".text-message");
 
 
+
+
+// поп-ап с покупкой товара
+
+let modalBuy = document.querySelector(".modal-buy");
+let buyButton = document.querySelectorAll(".buy");
+let closeBuy = document.querySelector(".modal-close-buy");
+let buttonContinue = document.querySelector(".button-continue");
+
+
+for (let buy of buyButton) {
+	buy.onclick = function() {
+		modalBuy.classList.add("modal-show");
+	};
+}
+
+closeBuy.addEventListener("click", function(evt) {
+	evt.preventDefault();
+	modalBuy.classList.remove("modal-show");
+});
+
+buttonContinue.addEventListener("click", function(evt) {
+	evt.preventDefault();
+	modalBuy.classList.remove("modal-show");
+});
+
+
+// поп-ап с формой обратной связи
+
+
 let isStorageSupport = true;
 let storageName = "";
 let storageMail = "";
@@ -88,6 +118,33 @@ mapClose.addEventListener("click", function(evt) {
 
 // слайдер
 
-let buttonOff = document.querySelector(".slide-current");
-let buttonLeft = document.querySelector(".slider-button-left");
-let buttonRigtt = document.querySelector("slider-button-right");
+let buttonsSlider = document.querySelectorAll(".slider-button");
+let sliderDrells = document.querySelector(".slider-drells");
+let sliderItem = document.querySelectorAll(".slider-item");
+
+for (let buttonSlider of buttonsSlider) {
+	buttonSlider.onclick = function () {
+		sliderItem[0].classList.toggle("slide-current");
+		sliderItem[1].classList.toggle("slide-current");
+
+	}
+}
+
+let slidersPoints = document.querySelectorAll(".slider-point");
+
+for (let sliderPoint of slidersPoints) {
+	sliderPoint.onclick = function () {
+		sliderItem[0].classList.toggle("slide-current");
+		sliderItem[1].classList.toggle("slide-current");
+		slidersPoints[0].classList.toggle("current");
+		slidersPoints[1].classList.toggle("current");
+	};
+}
+
+
+// слайдер с преимуществами
+
+let featuresItem = document.querySelectorAll(".features-item");
+let featuresDelivery = document.querySelector(".features-delivery");
+let featuresGuarantee = document.querySelector(".features-guarantee");
+let  featuresCredit = document.querySelector(". features-credit");
