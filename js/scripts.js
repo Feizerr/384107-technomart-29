@@ -85,3 +85,9 @@ mapClose.addEventListener("click", function(evt) {
 	evt.preventDefault();
 	popupMap.classList.remove("modal-show");
 });
+
+// слайдер
+
+let buttonOff = document.querySelector(".slide-current");
+let buttonLeft = document.querySelector(".slider-button-left");
+let buttonRigtt = document.querySelector("slider-button-right");
