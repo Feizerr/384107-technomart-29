@@ -121,16 +121,18 @@ mapClose.addEventListener("click", function(evt) {
 let buttonsSlider = document.querySelectorAll(".slider-button");
 let sliderDrells = document.querySelector(".slider-drells");
 let sliderItem = document.querySelectorAll(".slider-item");
+let slidersPoints = document.querySelectorAll(".slider-point");
 
 for (let buttonSlider of buttonsSlider) {
 	buttonSlider.onclick = function () {
 		sliderItem[0].classList.toggle("slide-current");
 		sliderItem[1].classList.toggle("slide-current");
-
+		slidersPoints[0].classList.toggle("current");
+		slidersPoints[1].classList.toggle("current");
 	}
-}
 
-let slidersPoints = document.querySelectorAll(".slider-point");
+	
+}
 
 for (let sliderPoint of slidersPoints) {
 	sliderPoint.onclick = function () {
@@ -147,4 +149,38 @@ for (let sliderPoint of slidersPoints) {
 let featuresItem = document.querySelectorAll(".features-item");
 let featuresDelivery = document.querySelector(".features-delivery");
 let featuresGuarantee = document.querySelector(".features-guarantee");
-let  featuresCredit = document.querySelector(". features-credit");
+let featuresCredit = document.querySelector(".features-credit");
+let delivery = document.querySelector(".delivery");
+let guarantee = document.querySelector(".guarantee");
+let credit = document.querySelector(".credit");
+
+featuresDelivery.addEventListener("click", function (evt) {
+	evt.preventDefault();
+	delivery.classList.add("features-item-active"); 
+	guarantee.classList.remove("features-item-active"); 
+	credit.classList.remove("features-item-active");
+	featuresDelivery.classList.add("features-button-active");
+	featuresGuarantee.classList.remove("features-button-active");
+	featuresCredit.classList.remove("features-button-active");
+
+})
+
+featuresGuarantee.addEventListener("click", function (evt) {
+	evt.preventDefault();
+	delivery.classList.remove("features-item-active"); 
+	guarantee.classList.add("features-item-active"); 
+	credit.classList.remove("features-item-active");
+	featuresDelivery.classList.remove("features-button-active");
+	featuresGuarantee.classList.add("features-button-active");
+	featuresCredit.classList.remove("features-button-active");
+})
+
+featuresCredit.addEventListener("click", function (evt) {
+	evt.preventDefault();
+	delivery.classList.remove("features-item-active"); 
+	guarantee.classList.remove("features-item-active"); 
+	credit.classList.add("features-item-active");
+	featuresDelivery.classList.remove("features-button-active");
+	featuresGuarantee.classList.remove("features-button-active");
+	featuresCredit.classList.add("features-button-active");
+})
