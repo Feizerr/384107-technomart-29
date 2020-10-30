@@ -771,6 +771,7 @@ img {
 
 .slider-item {
 	position: relative;
+	background-color: var(--darknest-grey);
 
 }
 
