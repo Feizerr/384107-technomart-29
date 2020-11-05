@@ -16,7 +16,7 @@ let buttonContinue = document.querySelector(".button-continue");
 for (let buy of buyButton) {
 	buy.onclick = function() {
 		modalBuy.classList.add("modal-show");
-	};
+	}
 }
 
 closeBuy.addEventListener("click", function(evt) {
@@ -51,9 +51,8 @@ buttonAsk.addEventListener("click", function (evt) {
 			if (storageMail) {
 				personMail.value = storageMail;
 				personText.focus();
-
 			}
-	}else {
+	}else	{
 	personName.focus();
 }
 });
@@ -69,8 +68,8 @@ formMessage.addEventListener("submit", function(evt) {
 		evt.preventDefault();
 		popupAsk.classList.remove("modal-error");
 		popupAsk.offsetWidth = popupAsk.offsetWidth;
-    	popupAsk.classList.add("modal-error");
-	} else {
+		popupAsk.classList.add("modal-error");
+	}else	{
 		if (isStorageSupport) {
 			localStorage.setItem("name", personName.value);
 			localStorage.setItem("email", personMail.value);
@@ -127,7 +126,7 @@ for (let sliderPoint of slidersPoints) {
 		sliderItem[1].classList.toggle("slide-current");
 		slidersPoints[0].classList.toggle("current");
 		slidersPoints[1].classList.toggle("current");
-	};
+	}
 }
 
 // слайдер с преимуществами
@@ -148,8 +147,7 @@ featuresDelivery.addEventListener("click", function (evt) {
 	featuresDelivery.classList.add("features-button-active");
 	featuresGuarantee.classList.remove("features-button-active");
 	featuresCredit.classList.remove("features-button-active");
-
-})
+});
 
 featuresGuarantee.addEventListener("click", function (evt) {
 	evt.preventDefault();
@@ -159,7 +157,7 @@ featuresGuarantee.addEventListener("click", function (evt) {
 	featuresDelivery.classList.remove("features-button-active");
 	featuresGuarantee.classList.add("features-button-active");
 	featuresCredit.classList.remove("features-button-active");
-})
+});
 
 featuresCredit.addEventListener("click", function (evt) {
 	evt.preventDefault();
@@ -169,4 +167,4 @@ featuresCredit.addEventListener("click", function (evt) {
 	featuresDelivery.classList.remove("features-button-active");
 	featuresGuarantee.classList.remove("features-button-active");
 	featuresCredit.classList.add("features-button-active");
-})
+});
