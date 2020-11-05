@@ -6,16 +6,12 @@ let personName = document.querySelector(".person-name");
 let personMail = document.querySelector(".mail-info");
 let personText = document.querySelector(".text-message");
 
-
-
-
 // поп-ап с покупкой товара
 
 let modalBuy = document.querySelector(".modal-buy");
 let buyButton = document.querySelectorAll(".buy");
 let closeBuy = document.querySelector(".modal-close-buy");
 let buttonContinue = document.querySelector(".button-continue");
-
 
 for (let buy of buyButton) {
 	buy.onclick = function() {
@@ -33,9 +29,7 @@ buttonContinue.addEventListener("click", function(evt) {
 	modalBuy.classList.remove("modal-show");
 });
 
-
 // поп-ап с формой обратной связи
-
 
 let isStorageSupport = true;
 let storageName = "";
@@ -47,7 +41,6 @@ try {
 } catch (err) {
 	isStorageSupport = false;
 }
-
 
 buttonAsk.addEventListener("click", function (evt) {
 	evt.preventDefault();
@@ -65,13 +58,11 @@ buttonAsk.addEventListener("click", function (evt) {
 }
 });
 
-
 askClose.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	popupAsk.classList.remove("modal-show"); 
 	popupAsk.classList.remove("modal-error");
 })
-
 
 formMessage.addEventListener("submit", function(evt) {
 	if (!personName.value || !personMail.value || !personText.value) {
@@ -95,7 +86,6 @@ window.addEventListener("keydown", function(evt) {
 			popupAsk.classList.remove("modal-error");
 		}
 	}
-
 })
 
 // Поп-ап с картой
@@ -107,7 +97,6 @@ const mapClose = document.querySelector(".modal-close-map");
 mapLink.addEventListener("click", function(evt) {
 	evt.preventDefault();
 	popupMap.classList.add("modal-show");
-
 
 });
 
@@ -130,8 +119,6 @@ for (let buttonSlider of buttonsSlider) {
 		slidersPoints[0].classList.toggle("current");
 		slidersPoints[1].classList.toggle("current");
 	}
-
-	
 }
 
 for (let sliderPoint of slidersPoints) {
@@ -142,7 +129,6 @@ for (let sliderPoint of slidersPoints) {
 		slidersPoints[1].classList.toggle("current");
 	};
 }
-
 
 // слайдер с преимуществами
 
