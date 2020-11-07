@@ -7,7 +7,6 @@ let personMail = document.querySelector(".mail-info");
 let personText = document.querySelector(".text-message");
 
 // поп-ап с покупкой товара
-
 let modalBuy = document.querySelector(".modal-buy");
 let buyButton = document.querySelectorAll(".buy");
 let closeBuy = document.querySelector(".modal-close-buy");
@@ -30,7 +29,6 @@ buttonContinue.addEventListener("click", function(evt) {
 });
 
 // поп-ап с формой обратной связи
-
 let isStorageSupport = true;
 let storageName = "";
 let storageMail = "";
@@ -52,14 +50,14 @@ buttonAsk.addEventListener("click", function (evt) {
 				personMail.value = storageMail;
 				personText.focus();
 			}
-	}else	{
+	} else {
 	personName.focus();
 }
 });
 
 askClose.addEventListener("click", function (evt) {
 	evt.preventDefault();
-	popupAsk.classList.remove("modal-show"); 
+	popupAsk.classList.remove("modal-show");
 	popupAsk.classList.remove("modal-error");
 })
 
@@ -69,7 +67,7 @@ formMessage.addEventListener("submit", function(evt) {
 		popupAsk.classList.remove("modal-error");
 		popupAsk.offsetWidth = popupAsk.offsetWidth;
 		popupAsk.classList.add("modal-error");
-	}else	{
+	} else {
 		if (isStorageSupport) {
 			localStorage.setItem("name", personName.value);
 			localStorage.setItem("email", personMail.value);
@@ -88,7 +86,6 @@ window.addEventListener("keydown", function(evt) {
 })
 
 // Поп-ап с картой
-
 const mapLink = document.querySelector(".img-popup-map");
 const popupMap = document.querySelector(".modal-map");
 const mapClose = document.querySelector(".modal-close-map");
@@ -105,7 +102,6 @@ mapClose.addEventListener("click", function(evt) {
 });
 
 // слайдер
-
 let buttonsSlider = document.querySelectorAll(".slider-button");
 let sliderDrells = document.querySelector(".slider-drells");
 let sliderItem = document.querySelectorAll(".slider-item");
@@ -130,7 +126,6 @@ for (let sliderPoint of slidersPoints) {
 }
 
 // слайдер с преимуществами
-
 let featuresItem = document.querySelectorAll(".features-item");
 let featuresDelivery = document.querySelector(".features-delivery");
 let featuresGuarantee = document.querySelector(".features-guarantee");
@@ -141,8 +136,8 @@ let credit = document.querySelector(".credit");
 
 featuresDelivery.addEventListener("click", function (evt) {
 	evt.preventDefault();
-	delivery.classList.add("features-item-active"); 
-	guarantee.classList.remove("features-item-active"); 
+	delivery.classList.add("features-item-active");
+	guarantee.classList.remove("features-item-active");
 	credit.classList.remove("features-item-active");
 	featuresDelivery.classList.add("features-button-active");
 	featuresGuarantee.classList.remove("features-button-active");
@@ -151,8 +146,8 @@ featuresDelivery.addEventListener("click", function (evt) {
 
 featuresGuarantee.addEventListener("click", function (evt) {
 	evt.preventDefault();
-	delivery.classList.remove("features-item-active"); 
-	guarantee.classList.add("features-item-active"); 
+	delivery.classList.remove("features-item-active");
+	guarantee.classList.add("features-item-active");
 	credit.classList.remove("features-item-active");
 	featuresDelivery.classList.remove("features-button-active");
 	featuresGuarantee.classList.add("features-button-active");
@@ -161,8 +156,8 @@ featuresGuarantee.addEventListener("click", function (evt) {
 
 featuresCredit.addEventListener("click", function (evt) {
 	evt.preventDefault();
-	delivery.classList.remove("features-item-active"); 
-	guarantee.classList.remove("features-item-active"); 
+	delivery.classList.remove("features-item-active");
+	guarantee.classList.remove("features-item-active");
 	credit.classList.add("features-item-active");
 	featuresDelivery.classList.remove("features-button-active");
 	featuresGuarantee.classList.remove("features-button-active");
